@@ -1,0 +1,60 @@
+{
+  "browser": {
+    "headless": false,
+    "viewport_width": 1920,
+    "viewport_height": 1080,
+    "timeout": 30000,
+    "navigation_timeout": 30000,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "args": [
+      "--no-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-blink-features=AutomationControlled",
+      "--disable-web-security",
+      "--disable-features=VizDisplayCompositor",
+      "--disable-gpu",
+      "--disable-software-rasterizer",
+      "--no-first-run",
+      "--no-default-browser-check",
+      "--disable-background-timer-throttling",
+      "--disable-renderer-backgrounding",
+      "--disable-backgrounding-occluded-windows",
+      "--disable-extensions",
+      "--disable-plugins",
+      "--disable-images",
+      "--disable-javascript"
+    ]
+  },
+  "extraction": {
+    "max_retries": 3,
+    "wait_timeout": 60,
+    "content_stable_time": 5,
+    "login_wait_time": 45,
+    "slider_wait_time": 60,
+    "min_image_size": 3000,
+    "min_canvas_size": 50,
+    "page_delay": 0.5,
+    "extraction_delay": 1.0,
+    "output_prefix": "提取结果"
+  },
+  "logging": {
+    "level": "INFO",
+    "log_dir": "logs",
+    "file_prefix": "doc_extractor",
+    "max_log_files": 10,
+    "console_output": true,
+    "file_output": true,
+    "colored_output": true
+  },
+  "pdf": {
+    "resolution": 150.0,
+    "quality": 85,
+    "format": "PDF",
+    "optimize": true,
+    "compress": true
+  },
+  "debug_mode": false,
+  "auto_cleanup": true,
+  "keep_browser_open": 15,
+  "output_base_dir": "提取结果"
+}
